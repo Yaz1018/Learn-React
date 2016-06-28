@@ -12,9 +12,9 @@ getDefaultProps: function () {
 	},
 	onButtonClick: function (e) {
 		e.preventDefault();
-
-		var name =  this.refs.name.value;
-		this.refs.name.value = "";
+		var refName = this.refs.name;
+		var name =  refName.value;
+		refName.value = "";
 		this.setState({
 			name: name
 		});
